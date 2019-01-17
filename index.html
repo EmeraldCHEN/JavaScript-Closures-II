@@ -2,7 +2,7 @@
 <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>ZOOM IN</title>
+        <title>ZOOM </title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <html>
@@ -11,15 +11,15 @@
     <h2> some heading 2 </h2>
     <p> some paragragh </p>
 
-    <button href="#" id="size-0_5">Zoom -50%</button>
-  
-    <button href="#" id="size-1">100%</button>
+    <button href="#" id="size-0_8">Zoom -80%</button>   
        
     <button href="#" id="size-2">Zoom +200%</button>
    
-    <button href="#" id="size-3">Zoom  +300%</button>  
+    <button href="#" id="size-3">Zoom  +300%</button> 
+        
+    <button href="#" id="size-1">100%</button>
 
-    <style>
+  <style>
         body {
             font-size: 2vmax;
             text-align: center;
@@ -35,7 +35,7 @@
             font-size: 1.2em;
         
         }
-        #size-0_5{
+        #size-0_8{
             background-color: aquamarine;
         }
         #size-1{
@@ -47,24 +47,24 @@
         #size-3{
             background-color:pink;
         }
-    </style>
-    <script>
+  </style>
+  <script>
     function makeSizer(size){
         return function(){
             document.body.style.fontSize = size + 'vmax';
         };
     }
-    let size0_5 = makeSizer(1);
+    let size0_8 = makeSizer(1.5);
     let size1 = makeSizer(2);
     let size2 = makeSizer(3);
     let size3 = makeSizer(4);
 
-    document.getElementById('size-0_5').onclick = size0_5;
+    document.getElementById('size-0_8').onclick = size0_8;
     document.getElementById('size-1').onclick = size1;
     document.getElementById('size-2').onclick = size2;
     document.getElementById('size-3').onclick = size3;
 
-    </script>
+  </script>
 </body>
 </html>
 
