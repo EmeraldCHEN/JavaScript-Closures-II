@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1> some heading 1 </h1>
+    <h2> some heading 2 </h2>
+    <p> some paragragh </p>
+
+    <button href="#" id="size-0_5">Zoom -50%</button>
+  
+    <button href="#" id="size-1">100%</button>
+       
+    <button href="#" id="size-2">Zoom +200%</button>
+   
+    <button href="#" id="size-3">Zoom  +300%</button>  
+</body>
+    <style>
+        body {
+            font-size: 2vmax;
+            text-align: center;
+            background-color: aliceblue;
+        }
+        h1 {
+            font-size: 2em;
+        }
+        h2 {
+            font-size: 1.5em;
+        }
+        button {
+            font-size: 1.2em;
+        
+        }
+        #size-0_5{
+            background-color: aquamarine;
+        }
+        #size-1{
+            background-color:yellow;
+        }
+        #size-2{
+            background-color:wheat;
+        }
+        #size-3{
+            background-color:pink;
+        }
+    </style>
+    <script>
+    function makeSizer(size){
+        return function(){
+            document.body.style.fontSize = size + 'vmax';
+        };
+    }
+    let size0_5 = makeSizer(1);
+    let size1 = makeSizer(2);
+    let size2 = makeSizer(3);
+    let size3 = makeSizer(4);
+
+    document.getElementById('size-0_5').onclick = size0_5;
+    document.getElementById('size-1').onclick = size1;
+    document.getElementById('size-2').onclick = size2;
+    document.getElementById('size-3').onclick = size3;
+
+    </script>
+
+</html>
+
+
+// Retrieved from https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures
